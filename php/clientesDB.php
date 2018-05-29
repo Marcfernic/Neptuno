@@ -33,6 +33,9 @@ try {
                 <a href="pedidosCliente.php?idCliente=<?php echo $row['IdCliente']; ?>">
                     <button name="pedidosCliente" value="pedidosCliente">Facturación</button>
                 </a>
+                <a href="borrarCliente.php?idCliente=<?php echo $row['IdCliente']; ?>">
+                        <button name="eliminarCliente" value="eliminarCliente">Eliminar</button>
+                </a>
             </TD>
         </TR>
 

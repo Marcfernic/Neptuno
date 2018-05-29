@@ -27,7 +27,13 @@ try {
             <TD><?php print $row['NombreCompany'] ?></TD>
             <TD><?php print $row['NombreContacto'] ?></TD>
             <TD><?php print $row['Telefono'] ?></TD>
-            <TD><a href="borrarProveedor.php?idProveedor=<?php echo $row['IdProveedor']; ?>">
+            <TD><a href="formProveedores.php?idProveedor=<?php echo $row['IdProveedor']; ?>">
+                    <button name="editarProveedor" value="editarProveedor">Editar</button>
+                </a>
+                <a href="pedidosProveedor.php?idProveedor=<?php echo $row['IdProveedor']; ?>">
+                    <button name="pedidosProveedor" value="pedidosProveedor">Facturación</button>
+                </a>
+                <a href="borrarProveedor.php?idProveedor=<?php echo $row['IdProveedor']; ?>">
                         <button name="eliminarProveedores" value="eliminarProveedores">Eliminar</button>
                 </a></TD>
         </TR>
@@ -46,3 +52,4 @@ catch(PDOException $e)
     </tbody>
 </TABLE>
 
+<a href="formProveedores.php"><button name="anyadirProveedor" value="anyadirProveedor">Añadir Proveedor</button></a>
